@@ -12,6 +12,35 @@ export class HomeCmp {
   game:Phaser.Game;
   textValue: Phaser.Text;
   updateCount: number;
+
+  timeCheck: number = 0;
+  flipFlag: boolean = false;
+
+  startList: any = new Array();
+  squareList: any = new Array();
+
+  masterCounter: number = 0;
+  squareCounter: number = 0;
+  square1Num: any;
+  square2Num: any;
+  savedSquareX1: any;
+  savedSquareY1: any;
+  savedSquareX2: any;
+  savedSquareY2: any;
+
+  map: any;
+  tileset: any;
+  layer: any;
+
+  marker: any;
+  currentTile: any;
+  currentTilePosition: any;
+
+  tileBack: any = 25;
+  timesUp: any = '+';
+  youWin: any = '+';
+
+  myCountdownSeconds: any;
   constructor() {
     this.game = new Phaser.Game(800, 600, Phaser.AUTO, 'content', {
       create: this.create,
